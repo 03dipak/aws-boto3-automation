@@ -1,0 +1,17 @@
+[
+    {
+        "Category": "Category A",
+        "Count": 100,
+        "Description": "This is category A"
+    },
+    {
+        "Category": "Category B",
+        "Count": 120,
+        "Description": "This is category B"
+    },
+    {
+        "Category": "Category C",
+        "Count": 150,
+        "Description": "This is category C"
+    }
+]
