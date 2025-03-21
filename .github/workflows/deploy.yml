@@ -20,14 +20,5 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ secrets.AWS_REGION }}
 
-    - name: Install dependencies
-      run: pip install wheel setuptools
-
-    - name:  create wheel file 
-      run: python setup.py bdist_wheel
-
-    - name: copy wheel file 
-      run: aws s3 cp dist/customer_analytics-0.1.0-py3-none-any.whl s3://feb2025-training-bucket/code/customer_analytics/
-
-    - name: copy glue start script 
-      run: aws s3 cp glue_upload_script s3://feb2025-training-bucket/code/customer_analytics/ --recursive
+    - name: aws s3 list items
+      run: aws s3 ls
